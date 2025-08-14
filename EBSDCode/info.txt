@@ -1,3 +1,6 @@
 Code used to analyze EBSD data of aragonite. All functions here require the mtex software package linked in the README for MATLAB. Many of the simpler operations for EBSD data processing did not require newly written code, such as importing data or generating IPF maps, and existing mtex functions were used.
 
-
+Several notes about all code here:
+1. everything is written with aragonite in mind, so some small changes may need to be made if data from a different mineral is used.
+2. the EBSD software used to collect all of my data (AZtec by Oxford) uses a different set of conventions to label the a, b, and c axes of aragonite than I am used to, so the Miller indices used in the code will not match up with the a, b, c convention I use in the descriptions. In the conventions I use, the c-axis is the growth direction approximately parallel to the planes made by the carbonates, the b-axis is the longest side of the unit cell, and the a-axis is perpendicular to both. The conversion between my convention and AZtec's Miller indices are as follows: a = [010], b = [001], and c = [100].
+3. types of variables needed for each input is described in the header of each function.
