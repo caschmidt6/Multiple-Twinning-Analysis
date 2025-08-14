@@ -1,1 +1,3 @@
+Code used to analyze EBSD data of aragonite. All functions here require the mtex software package linked in the README for MATLAB. Many of the simpler operations for EBSD data processing did not require newly written code, such as importing data or generating IPF maps, and existing mtex functions were used.
+
 
