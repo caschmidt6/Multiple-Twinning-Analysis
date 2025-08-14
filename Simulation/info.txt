@@ -1,1 +1,5 @@
+NacreGrowthSimv6 is the function that simulates nacre growth as shown in Fig. 3 and S5. Inputs and outputs are described in the header of the function itself. All decisionmaking is made upfront, so running a simulation is as simple as inputting whatever values you would like to try and then letting it run. It will automatically show the a- and c- axis orientation maps when it is finished.
 
+All other functions, except TwinFrequencySim, are just internal to the simulation.
+
+TwinFrequencySim
