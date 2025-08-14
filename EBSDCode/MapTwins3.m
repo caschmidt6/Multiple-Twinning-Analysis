@@ -1,12 +1,18 @@
 function [Twins,hist] = MapTwins3(ebsd,grains,maxT,err)
-%plot twin boundaries in a color-coded scale from 0x to 6x twins, labelling
-%only grain boundaries with c-axis misorientation less than or equal to the
-%threshold, and only labelling a twin if the corresponding twin
-%multiplicity appears as a peak on the histogram (i.e. the corresponding
-%b-axis misorientation is more common than the surrounding values).
+%"ebsd" should be an EBSD variable, "grains" should be a grains2d variable,
+%"maxT" is the highest twin multiple to be labeled, and "err" is the
+%allowed range around the true twin misorientation to be considered that
+%twin multiple (i.e. err = 1 means twin 1 can have a misorientation
+%anywhere from 62.8° to 64.8°).
+%"Twins" is the list of twin boundaries (1 line per boundary segment, nan
+%for not a twin, 0 for co-oriented in c but not a twin, or numbered with
+%the twin multiple). "hist" is the number of each twin multiple in the
+%given area.
 
+%identify twin boundary segments from inputs
 Twins = FindTwins(grains,maxT,err);
 
+%
 gbs = grains.boundary.grainId;
 [~,uq,~] = unique(gbs,'rows');
 hist = rmmissing(Twins(uq));

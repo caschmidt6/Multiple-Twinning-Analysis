@@ -4,6 +4,9 @@ function pim = PixelsPIC(ebsd,axis,step)
 %"axis" must be a string with the desired axis, 'a', 'b', or 'c'
 %"step" should be the step size in µm
 
+%Output: "pim" contains the matrix of RGB values for each pixel, each pixel
+%forced to be square.
+
 %convert the axis conventions from the AZtec software to what I'm used to
 %working with (the carbonate anions lie in the a-b plane, the b-axis is the
 %long axis)

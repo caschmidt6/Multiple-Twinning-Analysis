@@ -1,6 +1,7 @@
 function ipf = PixelsIPF(ebsd,step)
 %input an ebsd variable, output the matrix of RGB values associated with
 %the IPF-z map. "step" is the step size, tells the code how big a pixel is.
+%"ipf" output is the matrix of RGB values associated with the IPF map.
 
 %define color key for aragonite
 key = ipfColorKey(ebsd('aragonite'));

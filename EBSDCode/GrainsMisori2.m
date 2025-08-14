@@ -1,8 +1,8 @@
 function out = GrainsMisori2(grains,axis)
-%must run grainsimportscript.m first. Variable "grains" remains "grains",
+%Input "grains" should be a grains2d variable,
 %variable "axis" should be a string with a, b, or c, and name should be a
-%string with the name of the area. "makehist" should either be 0 or 1, 0 to
-%omit printing the histogram.
+%string with the name of the area. Output the misorientation of the
+%selected axis between each pair of adjacent grains.
 
 %convert the axis conventions from the AZtec software to what I'm used to
 %working with (the carbonate anions lie in the a-b plane, the b-axis is the

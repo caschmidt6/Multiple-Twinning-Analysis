@@ -1,4 +1,6 @@
 function out = GrainsOmega(grains)
+%input a grains2d variable, get out the average misorientation (omega)
+%between each pair of adjacent grains.
 
 %identify all grain boundaries between real grains
 gId = grains('Aragonite').boundary.grainId;
