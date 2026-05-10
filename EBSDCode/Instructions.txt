@@ -9,4 +9,6 @@ In addition to the code here, I would highly recommend getting comfortable with 
 4. PixelsIPF and PixelsPIC are the basic map producing functions using different color schemes. PixelsPIC produces maps of single-axis orientation similar to PIC maps
    (see Fig S5 from AFM multiple twinning paper for color bar: https://doi.org/10.1002/adfm.202518248)
 
-5. MapTwins3 
+5. MapTwins3 will produce a map of the twin boundaries color-coded by twin multiple with the color scheme in Fig. 2 layered on top of a band contract map
+
+6. GrainsOmega and GrainsMisori2 
