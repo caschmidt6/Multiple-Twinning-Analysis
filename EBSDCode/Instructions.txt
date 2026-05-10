@@ -6,9 +6,14 @@ In addition to the code here, I would highly recommend getting comfortable with 
 
 3. This will give you an "ebsd" type variable and a "grains2D" type variable that you can plug into the other post-processing functions included here
 
-4. PixelsIPF and PixelsPIC are the basic map producing functions using different color schemes. PixelsPIC produces maps of single-axis orientation similar to PIC maps
-   (see Fig S5 from AFM multiple twinning paper for color bar: https://doi.org/10.1002/adfm.202518248)
+4. PixelsIPF and PixelsPIC are the basic map producing functions using different color schemes. PixelsPIC produces maps of single-axis orientation similar to PIC maps (see Fig S5 from AFM multiple twinning paper for color bar: https://doi.org/10.1002/adfm.202518248)
 
 5. MapTwins3 will produce a map of the twin boundaries color-coded by twin multiple with the color scheme in Fig. 2 layered on top of a band contract map
 
-6. GrainsOmega and GrainsMisori2 
+6. GrainsOmega outputs the raw data for standard EBSD misorientation (omega in the AFM paper) histograms, this was used to produce the histograms in Fig. 1
+
+7. MisThresh outputs the single-axis misorientation between adjacent grains with an input misorientation range of a secondary axis, usually the c-axis, where an input of MisThresh(grains,'a','c',[0 1]) would output the a-axis misorientation between adjacent grains whose c-axis misorientation is between 0° and 1°. This was used to produce the histograms in Fig. 2
+
+8. TwinFrequency2 takes the output from MisThresh and counts the number of twin boundaries of each twin multiple. This is what I started with when making the plots in Fig. 4, though we ended up using peak amplitudes from the histograms instead of the raw counts produced by this function
+
+9. FindTwins and GrainsMisori are functions used internally by other functions, you probably won't need to run them by themselves but you will need to have them saved in the same folder as the other functions for them to work properly
