@@ -1,0 +1,12 @@
+In addition to the code here, I would highly recommend getting comfortable with the mtex plotting functions, starting here: https://mtex-toolbox.github.io/EBSDPlotting.html
+
+1. Get EBSD data in the form of a .ctf file
+
+2. Update EBSDimportscript with file path/name and variable names, then run the script
+
+3. This will give you an "ebsd" type variable and a "grains2D" type variable that you can plug into the other post-processing functions included here
+
+4. PixelsIPF and PixelsPIC are the basic map producing functions using different color schemes. PixelsPIC produces maps of single-axis orientation similar to PIC maps
+   (see Fig S5 from AFM multiple twinning paper for color bar: https://doi.org/10.1002/adfm.202518248)
+
+5. MapTwins3 
